@@ -6,6 +6,15 @@ const cloudinary = require("cloudinary");
 
 // create product
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
+  // const { name, description, price, category, Stock } = req.body;
+
+  // if (!name || !description || !price || !category || !Stock)
+  //   return next(new ErrorHandler("Please add all fields", 400));
+  // const file = req.file;
+  // const fileUri = getDataUri(file);
+  // const mycloud = await cloudinary.v2.uploader.upload(fileUri.content, {
+  //   folder: "product",
+  // });
   let images = [];
 
   if (typeof req.body.images === "string") {

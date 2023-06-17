@@ -65,7 +65,7 @@ const NewProduct = () => {
     myForm.set("Stock", Stock);
 
     images.forEach((image) => {
-      myForm.append("images", image);
+      myForm.append("image", image);
     });
     dispatch(createProduct(myForm));
   };
